@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+
+    //Ejercicio 1.2
+      var años = 2050-2017
+      console.log("el numero de años hasta 2050 "+ años);
+
+      var bisiestos = años/4
+      console.log("los años bisiestos son " + bisiestos);
+
+          // MEJOR HACER:
+
+        var leapYearInterval=4;
+        var StartingYear = 2017;
+        var targetYear = 2050;
+        var yearBeforeTargetYear= targetYear-1;
+        var yearInterval = yearBeforeTargetYear - StartingYear;
+        var remaimingYears = yearInterval % leapYearInterval;
+        var result= (yearInterval-remaimingYears) / leapYearInterval;
+
+        console.log (result)
+
+    //ejercicio 1.1
+
+    var baraja = 52
+    var negras = 52/2
+    console.log("las cartas negras son " +negras);
+
+    var paresnegras= negras/2
+    console.log("las cartas pares negras son " + paresnegras);
+    //maaaal no puede salir 13. Habría que haber calculado las cartas por palo, las cartas pares por palo y luego multiplicar * 4
+      //MEJOR:
+
+        var totalCards = 52;
+        var suits = 4;
+        var blackSuits = 2;
+        var cardsPerSuit = totalCards/suits;
+        var figuresPerSuit = 3;
+        var cardsWithNumberPerSuit = cardsPerSuit - figuresPerSuit;
+        var evenCardsPerSuit = cardsWithNumberPerSuit / 2;
+        var result = evenCardsPerSuit * blackSuits;
+
+        console.log (result);
+
+
+    //ejericio 2
+
+    var card="7C";
+    var numberCard= card [0];
+    var suit = card [1];
+    var previusCardNumber = +numberCard - 1;
+    var previusCard = previusCardNumber + suit;
+    console.log(previusCard);
+
+
+    var nextCardNumber = +numberCard + 1;
+    var nextCard = nextCardNumber + suit;
+
+    console.log("la cadena de numeros es " + card + previusCard + nextCard);
+
+  //Ejercicio 3
+
+  var card1="10C";
+  var suit = card1 [2];
+  var card2 = "9C";
+  var suit2 = card2 [1];
+
+
+    </script>
+    <title>
+    </title>
+  </head>
+  <body>
+
+  </body>
+</html>

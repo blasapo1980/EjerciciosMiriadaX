@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <script type="text/javascript">
+
+    //Ejercicio1
+
+    var carta = "4C"
+    if (carta[1] === "C") {
+      console.log("es de corazones")
+    }
+    if (carta[0] === "4") {
+      console.log("es el cuatro de corazones")
+    }
+
+  // mejor usar el &&
+
+  var carta = "4C";
+  if (carta[1] === "C" && carta[0] === "4"){
+    console.log("es el cuatro de corazones")
+  } else {
+    console.log("no es el cuatro de corazones")
+  }
+
+    /*ejercicio2 2. Utiliza un bucle para recorrer todos los años
+    bisiestos anteriores a 2050, e imprímelos en la consola.*/
+
+    for (i = 2017; i <= 2050; i = i + 4) {
+      console.log(i + " es bisiesto")
+    }
+
+    /* mal ¿cual es el primer año bisiesto? según ésto toma el 2017.
+    Un año bisiesto tiene que ser divisible entre 4, por tanto:
+    year % 4 = 0 */
+
+  var lastYear = 2050;
+  var leapYear = 4;
+  var currentYear = 2017;
+
+  var yearsSincelastYear = currentYear % leapYear;
+  var yearsUntilNextLeapYear = leapYear - currentYear % 4;
+        // aquí estamos restando a 4 - resto del resultado de dividir 2017 entre 4 (si da o es bisiesto, si da 1 es que ha pasado un año después del ultimo año bisiesto)
+  var nextLeapYear = currentYear + yearsUntilNextLeapYear;
+
+  for (var i = nextLeapYear; i < lastYear; i = i + leapYear) {
+    console.log(i + "es un año bisiesto")
+  }
+
+  // otra forma:
+
+  /*for (var i = nextLeapYear; i < lastYear; i = i + 1) {
+    if (i % leapYear ==="0") {
+       console.log(i + "es un año bisiesto")
+    }*/
+
+
+  /*Ejercicio3 3. Utiliza un bucle para recorrer todas las cartas
+  de la baraja, desde el 1 al 12 de cada palo. Imprime en pantalla
+  solamente las cartas rojas que sea múltiplos de 3.*/
+
+  var result = "";
+  var card = "dtpc";
+  for (var i=0; i< card.length; i=i+1){
+    for (var j=0; j<=13;j=j+1){
+      if (card [i]==="c" || card [i]==="d") {
+        if (j % 3 === 0){
+          result = result + j + " " + card [i];
+      }
+    }
+  }
+}
+
+console.log (result);
+  // sería algo asi... no me pilla || no entiendo
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
